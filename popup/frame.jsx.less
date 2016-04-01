@@ -1,0 +1,95 @@
+.popup-dialog-container {
+	position: fixed;
+	z-index: 1050;
+	top: 120px;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	.popup-dialog-header {
+		height: 40px;
+		line-height: 40px;
+		background-color: #f5f5f5;
+		border-bottom: solid 1px #ddd;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		.popup-dialog-title {
+			margin-right: 80px;
+			overflow: hidden;
+			padding: 0 15px;
+		}
+		.popup-dialog-close {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50px;
+			height: 39px;
+			//background-color: #ddd;
+			font-size: 24px;
+			text-align: center;
+			&:active {
+				background-color: #ddd;
+			}
+		}
+	}
+	.popup-dialog-body {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		width: 100%;
+		bottom: 50px;
+		overflow-y: scroll;
+	}
+	.popup-dialog-footer {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		height: 50px;
+	}
+	&.animate-bottom-in {
+		-webkit-animation: bottomIn .4s ease-out 1 normal;
+	}
+	&.animate-bottom-out {
+		-webkit-animation: bottomOut .4s ease-in 1 normal;
+	}
+	&.animate-left-in {
+		-webkit-animation: leftIn .4s ease-out 1 normal;
+	}
+	&.animate-left-out {
+		-webkit-animation: leftOut .4s ease-in 1 normal;
+	}
+}
+@-webkit-keyframes bottomIn{
+	0%{
+		-webkit-transform: translateY(600px);
+	}
+	100%{
+		-webkit-transform: translateY(0);
+	}	
+}
+@-webkit-keyframes bottomOut{
+	0%{
+		-webkit-transform: translateY(0);
+	}
+	100%{
+		-webkit-transform: translateY(600px);
+	}	
+}
+@-webkit-keyframes leftIn{
+	0%{
+		-webkit-transform: translateX(-600px);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+	}	
+}
+@-webkit-keyframes leftOut{
+	0%{
+		-webkit-transform: translateX(0);
+	}
+	100%{
+		-webkit-transform: translateX(-600px);
+	}	
+}
